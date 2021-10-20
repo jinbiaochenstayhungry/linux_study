@@ -1,0 +1,16 @@
+嵌入式系统有三大部分:
+bootloader,例如uboot
+linux kernel
+rootfs.
+
+而buildroot就是用来构建这三大工具的工具.以及如果你要进行一些自定义package的开发,那么你正常是要在电脑上进行开发,通过交叉编译工具编程成目标系统的package并进行安装.
+
+linaro就是这样一个交叉编译工具,提供了arm下一系列的工具如gcc、strip、objdump ld gprof nm readelf addr2line等等.
+
+我们首先来认识linaro,了解为什么交叉编译需要这些工具.
+
+首先需要了解,为什么我们需要这些工具,linux上面没有这些工具吗:
+
+linaro 致力于开发arm 生态下的免费喝开源软件包,包括linux 内核,编译器等工具甚至还有开发板(96板子)等项目.
+简单来讲,它和linux内核的关系就是,他会把优化的内核代码提交到内核.
+他和操作系统的关系是,他提供了工具来给如buildroot等工具使用,给asop项目使用.
